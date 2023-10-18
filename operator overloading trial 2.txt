@@ -1,0 +1,36 @@
+operator overloading 
+ trial 2
+#include<iostream>
+using namespace std;
+
+class MyClass
+{
+private:
+	int num;
+
+public:
+	MyClass(int num)
+	{
+		this->num = num;
+
+	}
+
+	int getnum()
+	{
+		return num;
+	}
+	MyClass add(MyClass& b)
+	{
+
+		return MyClass(num + b.num);
+	}
+
+};
+int main()
+{
+	MyClass m1(100), m2(200);
+	cout << m1.getnum() << endl;
+	cout << m2.getnum() << endl;
+	MyClass m3=m1.add(m2);
+	cout<< m3.getnum();
+ }
